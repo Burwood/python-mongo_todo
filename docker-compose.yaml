@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  web:
+    image: dchq/docker-python:latest
+    command: python -u app.py
+    environment:
+      - MONGO_IP={{db|container_hostname}}
+  db:
+    image: mongo:3.0.2
+
