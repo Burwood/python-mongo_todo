@@ -7,7 +7,8 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: web
-  name: web
+    app: python-todo
+  name: python-todo
 spec:
   replicas: 1
   strategy: {}
@@ -24,9 +25,19 @@ spec:
         - app.py
         env:
         - name: MONGO_IP
-          value: '{{db|container_hostname}}'
+          value: 'mongo-0.mongo.secure-app.svc.cluster.local'
         image: dchq/docker-python:latest
-        name: web
-        resources: {}
+        name: python-todo
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi        
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
       restartPolicy: Always
-status: {}
+      securityContext: {}
+      serviceAccount: secure-app
+      serviceAccountName: secure-app
