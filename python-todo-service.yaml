@@ -4,6 +4,7 @@ apiVersion: v1
 metadata:
   name: python-todo-service
 spec:
+  serviceType: LoadBalancer
   selector:
     app: python-todo
   ports:
