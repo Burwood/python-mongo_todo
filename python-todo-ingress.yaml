@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: python-todo-ingress
+  namespace: secure-app
+spec:
+ rules:
+ - http:
+     paths:
+     - path: /
+       backend:
+           serviceName: python-todo-service
+           servicePort: 80

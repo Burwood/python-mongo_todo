@@ -1,0 +1,13 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: python-todo-service
+spec:
+  selector:
+    app: python-todo
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 5000
