@@ -3,6 +3,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: python-todo-service
+  labels:
+    app: python-todo
 spec:
   selector:
     app: python-todo
