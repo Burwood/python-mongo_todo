@@ -29,7 +29,7 @@ spec:
         image: dchq/docker-python:latest
         name: python-todo
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
         resources:
           requests:
             cpu: 100m
