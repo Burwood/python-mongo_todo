@@ -26,7 +26,7 @@ spec:
         - app.py
         env:
         - name: MONGO_IP
-          value: 'mongo-0.mongo.secure-app.svc.cluster.local'
+          value: '10.8.5.5'
         image: dchq/docker-python:latest
         name: python-todo
         ports:
