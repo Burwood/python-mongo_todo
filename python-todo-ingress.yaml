@@ -2,7 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: python-todo-ingress
-  namespace: secure-app
 spec:
  rules:
  - http:
