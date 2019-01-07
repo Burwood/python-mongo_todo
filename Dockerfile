@@ -15,5 +15,4 @@ EXPOSE 5000
 WORKDIR /todo
 ADD src/ todo
 
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+CMD ["python app.py"]
