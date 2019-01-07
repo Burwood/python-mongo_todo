@@ -20,10 +20,6 @@ spec:
         app: python-todo
     spec:
       containers:
-      - args:
-        - python
-        - -u
-        - app.py
         envFrom:
           - configMapRef:
               name: env-backend     
