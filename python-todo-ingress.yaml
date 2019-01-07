@@ -13,7 +13,7 @@ spec:
  - host: *
    http:
      paths:
-     - path: /*
+     - path: /
        backend:
            serviceName: python-todo-service
            servicePort: 80
