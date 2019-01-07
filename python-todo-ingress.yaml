@@ -9,14 +9,11 @@ metadata:
     kubernetes.io/tls-acme: "false"
     nginx.ingress.kubernetes.io/tls-acme: "false"
 spec:
-  rules:
-      http:
-        paths:
-        - path: /new        
-          backend:
-            serviceName: python-todo
-            servicePort: 80
-        - path: /
-          backend:
-            serviceName: python-todo
-            servicePort: 80
+ rules:
+ - host: *
+   http:
+     paths:
+     - path: /*
+       backend:
+           serviceName: python-todo-service
+           servicePort: 80
