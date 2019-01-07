@@ -3,5 +3,7 @@ kind: ConfigMap
 metadata:
   name: env-backend
   namespace: secure-app
+  labels:
+    app: python-todo
 data:
   MONGO_URI: 'mongodb://mongo-0.mongo.secure-app.svc.cluster.local,mongo-1.mongo.secure-app.svc.cluster.local.mongo,mongo-2.mongo.secure-app.svc.cluster.local:27017/'
