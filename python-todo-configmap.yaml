@@ -4,4 +4,4 @@ metadata:
   name: env-backend
   namespace: secure-app
 data:
-  MONGO_IP: 'mongo-0.mongo.secure-app.svc.cluster.local'
+  MONGO_IP: 'mongodb://mongo-0.mongo.sample-app.svc.cluster.local,mongo-1.mongo.sample-app.svc.cluster.local.mongo,mongo-2.mongo.sample-app.svc.cluster.local:27017/'
