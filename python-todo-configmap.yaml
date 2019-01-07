@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-backend
+  namespace: secure-app
+data:
+  MONGO_IP: 'mongo-0.mongo.secure-app.svc.cluster.local'

@@ -24,9 +24,9 @@ spec:
         - python
         - -u
         - app.py
-        env:
-        - name: MONGO_IP
-          value: '10.8.5.5'
+        envFrom:
+          - configMapRef:
+              name: env-backend     
         image: dchq/docker-python:latest
         name: python-todo
         ports:
