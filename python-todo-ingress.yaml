@@ -12,7 +12,7 @@ metadata:
     nginx.ingress.kubernetes.io/tls-acme: "false"
 spec:
   rules:
-      http:
+  - http:
         paths:
           - backend:
               serviceName: python-todo-service
