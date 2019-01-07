@@ -12,7 +12,7 @@ RUN apk --update add --no-cache python2 py-pip \
 
 EXPOSE 5000
 
-WORKDIR /todo
 ADD src/ todo
+WORKDIR /todo
 
-CMD ["python app.py"]
+CMD ["python", "app.py"]
