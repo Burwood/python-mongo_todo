@@ -27,7 +27,7 @@ spec:
         envFrom:
           - configMapRef:
               name: env-backend     
-        image: dchq/docker-python:latest
+        image: janderton/python-mongo-todo:latest
         name: python-todo
         ports:
         - containerPort: 5000
