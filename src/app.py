@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 MONGO_URI = str(os.environ['MONGO_URI'])
 #client = MongoClient('mongodb://mongo-0.mongo.secure-app.svc.cluster.local,mongo-1.mongo.secure-app.svc.cluster.local.mongo,mongo-2.mongo.secure-app.svc.cluster.local:27017/')
-client = MongoClient('MONGO_URI')
+client = MongoClient(MONGO_URI)
 db = client.tododb
 
 
